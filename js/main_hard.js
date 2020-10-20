@@ -9,8 +9,8 @@
     const count = document.getElementById("count");
     const startBtn = document.getElementById("start-btn")
     const startContainer = document.getElementById("startContainer")
-    var correct = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samuraiquiz/master/audio/Kuroko%20Omigoto%20voices.mp3");
-    var incorrect = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samuraiquiz/master/audio/incorrect2.mp3");
+    var correct = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Kuroko%20Omigoto%20voices.mp3");
+    var incorrect = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/incorrect2.mp3");
 
 
     function runTimer(){
