@@ -11,6 +11,7 @@
     const startContainer = document.getElementById("startContainer")
     var correct = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Kurokoomigotovoices.mp3");
     var incorrect = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/incorrect2.mp3");
+    var endVoice = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Kurokoomigotovoices.mp3");
 
 
     function runTimer(){
@@ -150,6 +151,9 @@ countNum();
   }
 
 if(score === quizSet.length){
+
+  endVoice.play();
+
   const perfectText = document.getElementById("perfectText");
   perfectText.textContent = "Perfect!!";
 
