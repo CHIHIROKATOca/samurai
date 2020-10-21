@@ -9,9 +9,9 @@
     const count = document.getElementById("count");
     const startBtn = document.getElementById("start-btn")
     const startContainer = document.getElementById("startContainer")
-    var correctvoice = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Kurokoomigotovoices.mp3");
+    var correct = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Kurokoomigotovoices.mp3");
     var incorrect = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/incorrect2.mp3");
-    var endVoice = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Kurokoomigotovoices.mp3");
+
 
     function runTimer(){
       const timer = document.getElementById("timer");
@@ -62,7 +62,7 @@ function checkAnswer(li) {
   if (li.textContent === quizSet[currentNum].c[0]) {
     li.classList.add('correct');
     score++;
-    correctvoice.play();
+    correct.play();
   } else {
     li.classList.add('wrong');
     incorrect.play();
@@ -151,9 +151,6 @@ if(currentNum === quizSet.length - 1){
 
 
 if(score === quizSet.length){
-
-  endVoice.play();
-
   const perfectText = document.getElementById("perfectText");
   perfectText.textContent = "Perfect!!";
 
