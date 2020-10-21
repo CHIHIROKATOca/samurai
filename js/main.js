@@ -10,7 +10,7 @@
     const startBtn = document.getElementById("start-btn")
     const startContainer = document.getElementById("startContainer")
     var correct = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Kurokoomigotovoices.mp3");
-    var incorrect = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samuraiquiz/master/audio/incorrect2.mp3");
+    var incorrect = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/incorrect2.mp3");
     var endVoice = new Audio("https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Kurokogameovervoices.mp3");
 
 
