@@ -137,6 +137,7 @@ if(btn.classList.contains("disabled")){
 btn.classList.add("disabled");
 
 if(currentNum === quizSet.length - 1){
+  endVoice.play();
   // console.log(`Score: ${score} / ${quizSet.length}`);
   scorelabel.textContent = `Score: ${score} / ${quizSet.length}`;
   result.classList.remove("hidden");
@@ -150,7 +151,6 @@ if(currentNum === quizSet.length - 1){
 
 if(score === quizSet.length){
 
-  endVoice.play();
 
   const perfectText = document.getElementById("clearText");
   perfectText.textContent = "All Clear! Congratulations!";

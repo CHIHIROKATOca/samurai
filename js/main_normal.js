@@ -139,6 +139,7 @@ countNum();
   btn.classList.add("disabled");
 
   if(currentNum === quizSet.length - 1){
+    endVoice.play();
     // console.log(`Score: ${score} / ${quizSet.length}`);
     scorelabel.textContent = `Score: ${score} / ${quizSet.length}`;
     result.classList.remove("hidden");
@@ -152,7 +153,6 @@ countNum();
 
 if(score === quizSet.length){
 
-  endVoice.play();
 
   const perfectText = document.getElementById("perfectText");
   perfectText.textContent = "Perfect!!";
