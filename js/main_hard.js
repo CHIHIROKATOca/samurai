@@ -139,7 +139,6 @@ countNum();
   btn.classList.add("disabled");
 
   if(currentNum === quizSet.length - 1){
-    endVoice.play();
     // console.log(`Score: ${score} / ${quizSet.length}`);
     scorelabel.textContent = `Score: ${score} / ${quizSet.length}`;
     result.classList.remove("hidden");
