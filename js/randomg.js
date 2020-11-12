@@ -8,4 +8,4 @@ txt[5]="images/character/r-s.png";
 
 mmax = 5; //メッセージ行数
 txtno = Math.floor(Math.random() * mmax);
-document.write("<img src='"+txt[txtno]+"'>");
+document.write("<img src='"+txt[txtno]+"' class='quiz_img'>");

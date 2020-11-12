@@ -893,6 +893,17 @@ border: 5px solid #fa8c8c;
 #hidden{
     display: none;
 }
+#top-haomaru{
+    width: 50%;
+    position: fixed;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 80%;
+    bottom: -20%;
+    right:0%;
+    object-fit: contain;
+
+}
 
 
 @media(max-width:767px){
@@ -937,6 +948,18 @@ border: 5px solid #fa8c8c;
     }
     #perfect-animation{
         display: none;
+    }
+
+    #top-haomaru{
+        width: 70%;
+        position: fixed;
+        overflow: hidden;
+        pointer-events: none;
+        opacity: 80%;
+        bottom: -10%;
+        right:-10%;
+        object-fit: contain;
+
     }
 
 }
@@ -1099,6 +1122,18 @@ border: 5px solid #fa8c8c;
 
         }
 
+        #top-haomaru{
+            width: 70%;
+            position: fixed;
+            overflow: hidden;
+            pointer-events: none;
+            opacity: 80%;
+            bottom: -25%;
+            right:-20%;
+            object-fit: contain;
+
+        }
+
         #result{
             width: 80%;
             height: 70%;
@@ -1249,6 +1284,17 @@ border: 5px solid #fa8c8c;
 
         #perfect-animation-tablet{
             display: none;
+        }
+        #top-haomaru{
+            width: 110%;
+            position: fixed;
+            overflow: hidden;
+            pointer-events: none;
+            opacity: 80%;
+            bottom: -10%;
+            right:-35%;
+            object-fit: contain;
+
         }
 }
 }

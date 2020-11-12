@@ -17,8 +17,7 @@
     function runTimer(){
       const timer = document.getElementById("timer");
       timer.textContent = ((Date.now()-startTime)/1000).toFixed(2);
-
-    timeoutId = setTimeout(function() {
+      timeoutId = setTimeout(function() {
         runTimer();
       },10);
     }
@@ -81,7 +80,6 @@
 
         $("#playBtn").data("key", quizSet[currentNum].id);
 
-
         while(choices.firstChild){
           choices.removeChild(choices.firstChild);
         }
@@ -114,12 +112,14 @@
     function playAudio(){
       const key = $(this).data("key");
       const audio = $(`audio[data-key="${key}"]`)[0];
-      audio.currentTime = 0;
+      // audio.currentTime = 0;
   　   audio.play();
-      console.log($(`audio[data-key="${key}"]`))
+      // console.log($(`audio[data-key="${key}"]`))
     }
     countNum();
     $("#playBtn").click(playAudio);
+
+
     btn.addEventListener("click", ()=>{
       function countNum(){
       if(currentNum === quizSet.length - 1){
