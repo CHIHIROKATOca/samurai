@@ -1134,6 +1134,10 @@ border: 5px solid #fa8c8c;
 
         }
 
+        .footer-text{
+            font-size: 5px;
+        }
+
         #result{
             width: 80%;
             height: 70%;
