@@ -119,7 +119,6 @@
     countNum();
     $("#playBtn").click(playAudio);
 
-
     btn.addEventListener("click", ()=>{
       function countNum(){
       if(currentNum === quizSet.length - 1){
