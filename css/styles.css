@@ -1129,7 +1129,7 @@ border: 5px solid #fa8c8c;
             pointer-events: none;
             opacity: 80%;
             bottom: -35%;
-            right:3%;
+            right:-5%;
             object-fit: contain;
 
         }
