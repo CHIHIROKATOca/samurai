@@ -1128,8 +1128,8 @@ border: 5px solid #fa8c8c;
             overflow: hidden;
             pointer-events: none;
             opacity: 80%;
-            bottom: -30%;
-            right:-10%;
+            bottom: -45%;
+            right:0%;
             object-fit: contain;
 
         }
