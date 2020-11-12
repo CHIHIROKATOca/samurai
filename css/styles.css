@@ -122,6 +122,15 @@ img{
     right:0;
     object-fit: contain;
 }
+
+#counter{
+    width: 80px;
+    position: absolute;
+    opacity: 100%;
+    left: 0%;
+    top: 0%;
+    margin: 10px 10px;
+}
 .sr-only {
     position: absolute;
     width: 1px;

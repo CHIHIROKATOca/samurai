@@ -112,10 +112,11 @@
     function playAudio(){
       const key = $(this).data("key");
       const audio = $(`audio[data-key="${key}"]`)[0];
-      // audio.currentTime = 0;
+      audio.currentTime = 0;
   　   audio.play();
       // console.log($(`audio[data-key="${key}"]`))
     }
+
     countNum();
     $("#playBtn").click(playAudio);
 
