@@ -29,6 +29,8 @@
       startContainer.remove();
       startTime = Date.now();
       runTimer();
+      const key = $("#playBtn").data("key");
+      playAudio(key);
     })
 ;
 
@@ -114,15 +116,27 @@ setQuiz();
 function countNum(){
 count.textContent = `Quiz: 1 / ${quizSet.length}`;
 }
-function playAudio(){
-const key = $(this).data("key");
-const audio = $(`audio[data-key="${key}"]`)[0];
-audio.currentTime = 0;
+function playAudio(key){
+  const audio = $(`audio[data-key="${key}"]`)[0];
+  audio.currentTime = 0;
 　   audio.play();
-console.log($(`audio[data-key="${key}"]`))
+  // console.log($(`audio[data-key="${key}"]`))
+}
+
+//（ １・PlayAudioをどこでも呼べるようにする）
+// ２・keyを引数として使用する
+// ３・keyをつかってPlayAudioを望ましいタイミングで呼び出す
+
+//関数の中に依存するものをおかない！
+//どうしても使用したいときは別の引数にまかせる！
+
+function onclickPlayBtn(){
+  const key = $(this).data("key");
+  playAudio(key);
 }
 countNum();
-$("#playBtn").click(playAudio);
+$("#playBtn").click(onclickPlayBtn);
+
 btn.addEventListener("click", ()=>{
 function countNum(){
 if(currentNum === quizSet.length - 1){
@@ -148,6 +162,11 @@ countNum();
   }else{
     currentNum++;
     setQuiz();
+    setTimeout(() => {
+      const key = $("#playBtn").data("key");
+      playAudio(key);
+    }, 300);
+
   }
 
 if(score === quizSet.length){

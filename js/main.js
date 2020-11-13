@@ -28,6 +28,8 @@
       startContainer.remove();
       startTime = Date.now();
       runTimer();
+      const key = $("#playBtn").data("key");
+      playAudio(key);
     })
 ;
     const quizSet =shuffle([
@@ -109,25 +111,37 @@
     function countNum(){
       count.textContent = `Quiz: 1 / ${quizSet.length}`;
     }
-    function playAudio(){
-      const key = $(this).data("key");
+    function playAudio(key){
       const audio = $(`audio[data-key="${key}"]`)[0];
       audio.currentTime = 0;
   　   audio.play();
       // console.log($(`audio[data-key="${key}"]`))
     }
 
+    //（ １・PlayAudioをどこでも呼べるようにする）
+    // ２・keyを引数として使用する
+    // ３・keyをつかってPlayAudioを望ましいタイミングで呼び出す
+
+    //関数の中に依存するものをおかない！
+    //どうしても使用したいときは別の引数にまかせる！
+
+    function onclickPlayBtn(){
+      const key = $(this).data("key");
+      playAudio(key);
+    }
     countNum();
-    $("#playBtn").click(playAudio);
+    $("#playBtn").click(onclickPlayBtn);
+
+
 
     btn.addEventListener("click", ()=>{
       function countNum(){
-      if(currentNum === quizSet.length - 1){
-      count.textContent = `Quiz: ${currentNum + 1} / ${quizSet.length}`;
-      }else{
-      count.textContent = `Quiz: ${currentNum + 2} / ${quizSet.length}`;
+        if(currentNum === quizSet.length - 1){
+        count.textContent = `Quiz: ${currentNum + 1} / ${quizSet.length}`;
+        }else{
+        count.textContent = `Quiz: ${currentNum + 2} / ${quizSet.length}`;
+       }
       }
-    }
       countNum();
 
       if(btn.classList.contains("disabled")){
@@ -146,6 +160,11 @@
       }else{
         currentNum++;
         setQuiz();
+        setTimeout(() => {
+          const key = $("#playBtn").data("key");
+          playAudio(key);
+        }, 300);
+
       }
 
 

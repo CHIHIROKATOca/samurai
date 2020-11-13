@@ -1,5 +1,5 @@
 var audio2 = new Audio();
-audio2.src = 'https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Musicloop3low.mp3';
+// audio2.src = 'https://raw.githubusercontent.com/CHIHIROKATOca/samurai/master/audio/Musicloop3low.mp3';
 
 window.onload = function(){
   audio2.play();
