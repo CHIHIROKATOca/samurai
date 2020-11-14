@@ -1054,7 +1054,7 @@ border: 5px solid #fa8c8c;
     }
     .container-start{
         width: 400px;
-        height: 280px;
+        height: auto;
         margin: 0px auto;
         /* background-color: white; */
         border-radius: 4px;
